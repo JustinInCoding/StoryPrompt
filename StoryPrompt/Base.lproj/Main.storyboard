@@ -79,6 +79,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="5" maxValue="10" minimumValueImage="5.circle" catalog="system" maximumValueImage="10.circle" translatesAutoresizingMaskIntoConstraints="NO" id="5f9-m5-ZgK">
                                         <rect key="frame" x="-2" y="210.33333333333331" width="357" height="31"/>
                                         <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <action selector="changeNumber:" destination="BYZ-38-t0r" eventType="valueChanged" id="T0b-gt-ZiC"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-qa-FXt">
                                         <rect key="frame" x="0.0" y="262.33333333333331" width="353" height="20.333333333333314"/>
@@ -98,6 +101,9 @@
                                             <segment title="Scifi"/>
                                             <segment title="Horror"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeStoryType:" destination="BYZ-38-t0r" eventType="valueChanged" id="ocs-JY-NOW"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUU-HZ-LKn">
                                         <rect key="frame" x="0.0" y="400" width="353" height="34.333333333333314"/>
@@ -116,6 +122,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hnl-sa-5nT" secondAttribute="trailing" constant="20" id="yaV-ke-Q1H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adjectiveTextField" destination="Obe-Qw-OsG" id="0xO-gU-59L"/>
+                        <outlet property="nounTextField" destination="YPl-tE-Ylx" id="1bc-Fq-k8c"/>
+                        <outlet property="numberLabel" destination="3zl-GO-TKk" id="xtW-5u-ekq"/>
+                        <outlet property="numberSlider" destination="5f9-m5-ZgK" id="tDS-fS-Xc9"/>
+                        <outlet property="verbTextField" destination="irT-bU-y6V" id="Xc3-TF-EaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
