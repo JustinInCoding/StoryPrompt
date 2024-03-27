@@ -35,7 +35,7 @@ class AddStoryPromptViewController: UIViewController {
 	@IBAction func generateStoryPrompt(_ sender: UIButton) {
 		updateStoryPrompt()
 		if storyPrompt.isValid() {
-			print(storyPrompt)
+			performSegue(withIdentifier: "StoryPrompt", sender: nil)
 		} else {
 			let alert = UIAlertController(title: "Invalid Story Prompt", message: "Please fill out all of the fields", preferredStyle: .alert)
 			let action = UIAlertAction(title: "OK", style: .default) { action in
@@ -50,9 +50,6 @@ class AddStoryPromptViewController: UIViewController {
 		super.viewDidLoad()
 		
 		numberSlider.value = 7.5
-		storyPrompt.noun = "toaster"
-		storyPrompt.adjective = "smelly"
-		storyPrompt.verb = "burps"
 		storyPrompt.number = Int(numberSlider.value)
 		storyPromptImageView.isUserInteractionEnabled = true
 		let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changeImage))
@@ -107,6 +104,15 @@ class AddStoryPromptViewController: UIViewController {
 		storyPrompt.adjective = adjectiveTextField.text ?? ""
 		storyPrompt.verb = verbTextField.text ?? ""
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "StoryPrompt" {
+			guard let storyPromptViewController = segue.destination as? StoryPromptViewController else {
+				return
+			}
+			storyPromptViewController.storyPrompt = storyPrompt
+		}
+	}
 }
 
 extension AddStoryPromptViewController: UITextFieldDelegate {
@@ -119,13 +125,10 @@ extension AddStoryPromptViewController: UITextFieldDelegate {
 
 extension AddStoryPromptViewController: PHPickerViewControllerDelegate {
 	func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-		print("hereee")
 		if !results.isEmpty {
-			print("hereee 22222")
 			let result = results.first!
 			let itemProvider = result.itemProvider
 			if itemProvider.canLoadObject(ofClass: UIImage.self) {
-				print("hereee 33333")
 				itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
 					guard let image = image as? UIImage else {
 						return
