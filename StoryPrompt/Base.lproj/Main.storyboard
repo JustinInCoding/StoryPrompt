@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-sa-5nT">
-                                <rect key="frame" x="20" y="115.99999999999997" width="353" height="434.33333333333326"/>
+                                <rect key="frame" x="20" y="116" width="353" height="656.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="li4-1W-r2J">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -98,14 +98,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object-object_box-of-books" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-zx-SEN">
+                                        <rect key="frame" x="0.0" y="304.66666666666669" width="353" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gmn-zx-SEN" secondAttribute="height" multiplier="353:200" id="Z8A-ye-xeT"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45E-jX-bHz">
-                                        <rect key="frame" x="0.0" y="304.66666666666669" width="353" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="526.66666666666663" width="353" height="20.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ymk-QD-9ZU">
-                                        <rect key="frame" x="0.0" y="347" width="353" height="32"/>
+                                        <rect key="frame" x="0.0" y="569" width="353" height="32"/>
                                         <segments>
                                             <segment title="Scifi"/>
                                             <segment title="Horror"/>
@@ -115,7 +121,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUU-HZ-LKn">
-                                        <rect key="frame" x="0.0" y="400" width="353" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="622" width="353" height="34.333333333333371"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Generate Story Prompt"/>
@@ -139,17 +145,19 @@
                         <outlet property="nounTextField" destination="YPl-tE-Ylx" id="1bc-Fq-k8c"/>
                         <outlet property="numberLabel" destination="3zl-GO-TKk" id="xtW-5u-ekq"/>
                         <outlet property="numberSlider" destination="5f9-m5-ZgK" id="tDS-fS-Xc9"/>
+                        <outlet property="storyPromptImageView" destination="gmn-zx-SEN" id="9Nf-hR-N2x"/>
                         <outlet property="verbTextField" destination="irT-bU-y6V" id="Xc3-TF-EaF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="-6"/>
+            <point key="canvasLocation" x="26.717557251908396" y="-6.3380281690140849"/>
         </scene>
     </scenes>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="123"/>
         <image name="5.circle" catalog="system" width="128" height="123"/>
+        <image name="object-object_box-of-books" width="1000" height="1000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
