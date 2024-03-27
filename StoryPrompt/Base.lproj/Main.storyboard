@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-sa-5nT">
-                                <rect key="frame" x="20" y="116" width="353" height="656.33333333333337"/>
+                                <rect key="frame" x="20" y="160" width="353" height="656.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="li4-1W-r2J">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -229,9 +229,15 @@
                             <outlet property="delegate" destination="4ns-hL-ExX" id="f5j-fK-dok"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xlt-Vf-TME"/>
+                    <navigationItem key="navigationItem" id="xlt-Vf-TME">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nQA-8B-cYG">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="ztW-kL-mpN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="NfR-ld-n57" kind="show" identifier="ShowStoryPrompt" id="RRA-Dj-4du"/>
+                        <segue destination="NfR-ld-n57" kind="show" identifier="showStoryPrompt" id="RRA-Dj-4du"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNX-KP-Wtf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
