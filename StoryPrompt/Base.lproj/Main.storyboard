@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NfR-ld-n57">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zIl-kn-3y7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Story Prompt View Controller-->
+        <!--New Story Prompt-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddStoryPromptViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-sa-5nT">
-                                <rect key="frame" x="20" y="116" width="353" height="656.33333333333337"/>
+                                <rect key="frame" x="20" y="160" width="353" height="656.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="li4-1W-r2J">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -126,7 +126,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Generate Story Prompt"/>
                                         <connections>
-                                            <action selector="generateStoryPrompt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJx-xC-Atl"/>
+                                            <segue destination="NfR-ld-n57" kind="show" id="KQ5-QX-H8w"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,6 +140,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hnl-sa-5nT" secondAttribute="trailing" constant="20" id="yaV-ke-Q1H"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Story Prompt" id="exp-jc-XrH"/>
                     <connections>
                         <outlet property="adjectiveTextField" destination="Obe-Qw-OsG" id="0xO-gU-59L"/>
                         <outlet property="nounTextField" destination="YPl-tE-Ylx" id="1bc-Fq-k8c"/>
@@ -151,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.717557251908396" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="953.43511450381675" y="-6.3380281690140849"/>
         </scene>
         <!--Story Prompt View Controller-->
         <scene sceneID="c57-gD-GYv">
@@ -186,13 +187,32 @@
                             <constraint firstItem="O5a-6T-dpF" firstAttribute="width" secondItem="kqc-JL-q3q" secondAttribute="width" id="fpk-nc-3S0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gCZ-TZ-ly4"/>
                     <connections>
                         <outlet property="storyPromptTextView" destination="sd8-0w-RAU" id="Jl4-9I-dpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1a-mC-kF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803.81679389312978" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="1730.534351145038" y="-6.3380281690140849"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A6r-SV-Etn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zIl-kn-3y7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0nb-dI-cGG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6fI-Ff-fou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gC-hK-6Y9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26.717557251908396" y="-6.3380281690140849"/>
         </scene>
     </scenes>
     <resources>
