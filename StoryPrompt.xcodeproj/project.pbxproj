@@ -16,6 +16,7 @@
 		98709DEC2BB3A33800541528 /* StoryPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98709DEA2BB3A33800541528 /* StoryPrompts.swift */; };
 		98709DED2BB3A33800541528 /* StoryPromptEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98709DEB2BB3A33800541528 /* StoryPromptEntry.swift */; };
 		98709DEF2BB3C70C00541528 /* StoryPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98709DEE2BB3C70C00541528 /* StoryPromptViewController.swift */; };
+		98709DF22BB3DAD900541528 /* StoryPromptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98709DF12BB3DAD900541528 /* StoryPromptTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		98709DEA2BB3A33800541528 /* StoryPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPrompts.swift; sourceTree = "<group>"; };
 		98709DEB2BB3A33800541528 /* StoryPromptEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPromptEntry.swift; sourceTree = "<group>"; };
 		98709DEE2BB3C70C00541528 /* StoryPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptViewController.swift; sourceTree = "<group>"; };
+		98709DF12BB3DAD900541528 /* StoryPromptTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				98709DD92BB3A04500541528 /* AddStoryPromptViewController.swift */,
 				98709DEE2BB3C70C00541528 /* StoryPromptViewController.swift */,
+				98709DF12BB3DAD900541528 /* StoryPromptTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98709DF22BB3DAD900541528 /* StoryPromptTableViewController.swift in Sources */,
 				98709DEF2BB3C70C00541528 /* StoryPromptViewController.swift in Sources */,
 				98709DED2BB3A33800541528 /* StoryPromptEntry.swift in Sources */,
 				98709DDA2BB3A04500541528 /* AddStoryPromptViewController.swift in Sources */,

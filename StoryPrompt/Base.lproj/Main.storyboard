@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-sa-5nT">
-                                <rect key="frame" x="20" y="160" width="353" height="656.33333333333337"/>
+                                <rect key="frame" x="20" y="116" width="353" height="656.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="li4-1W-r2J">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953.43511450381675" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="886" y="-482"/>
         </scene>
         <!--Story Prompt View Controller-->
         <scene sceneID="c57-gD-GYv">
@@ -195,7 +195,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1a-mC-kF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730.534351145038" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="1763" y="-6"/>
+        </scene>
+        <!--Story Prompt Table View Controller-->
+        <scene sceneID="Z4A-yf-6IC">
+            <objects>
+                <tableViewController id="4ns-hL-ExX" customClass="StoryPromptTableViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OQ3-xi-Kbr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryPromptCell" textLabel="pwL-VQ-146" style="IBUITableViewCellStyleDefault" id="al3-2U-DRG">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="al3-2U-DRG" id="aDv-B5-KlE">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pwL-VQ-146">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4ns-hL-ExX" id="Xs8-vQ-CRR"/>
+                            <outlet property="delegate" destination="4ns-hL-ExX" id="f5j-fK-dok"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xlt-Vf-TME"/>
+                    <connections>
+                        <segue destination="NfR-ld-n57" kind="show" identifier="ShowStoryPrompt" id="RRA-Dj-4du"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNX-KP-Wtf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="-6"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A6r-SV-Etn">
@@ -208,14 +249,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6fI-Ff-fou"/>
+                        <segue destination="4ns-hL-ExX" kind="relationship" relationship="rootViewController" id="VXq-5R-QaC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gC-hK-6Y9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.717557251908396" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="-584" y="-6"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RRA-Dj-4du"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="123"/>
         <image name="5.circle" catalog="system" width="128" height="123"/>
@@ -223,6 +267,9 @@
         <image name="object-object_box-of-books" width="1000" height="1000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
