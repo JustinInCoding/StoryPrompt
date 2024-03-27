@@ -8,7 +8,7 @@
 import UIKit
 import PhotosUI
 
-class ViewController: UIViewController {
+class AddStoryPromptViewController: UIViewController {
 	
 	@IBOutlet weak var nounTextField: UITextField!
 	@IBOutlet weak var adjectiveTextField: UITextField!
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
 	}
 }
 
-extension ViewController: UITextFieldDelegate {
+extension AddStoryPromptViewController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
 		updateStoryPrompt()
@@ -117,7 +117,7 @@ extension ViewController: UITextFieldDelegate {
 	}
 }
 
-extension ViewController: PHPickerViewControllerDelegate {
+extension AddStoryPromptViewController: PHPickerViewControllerDelegate {
 	func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
 		print("hereee")
 		if !results.isEmpty {
