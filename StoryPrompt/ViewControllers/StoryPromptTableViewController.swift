@@ -14,27 +14,6 @@ class StoryPromptTableViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let storyPrompt1 = StoryPromptEntry()
-		let storyPrompt2 = StoryPromptEntry()
-		let storyPrompt3 = StoryPromptEntry()
-		
-		storyPrompt1.noun = "toaster"
-		storyPrompt1.adjective = "smelly"
-		storyPrompt1.verb = "attacks"
-		storyPrompt1.number = 5
-		
-		storyPrompt2.noun = "toaster"
-		storyPrompt2.adjective = "smelly"
-		storyPrompt2.verb = "attacks"
-		storyPrompt2.number = 5
-		
-		storyPrompt3.noun = "toaster"
-		storyPrompt3.adjective = "smelly"
-		storyPrompt3.verb = "attacks"
-		storyPrompt3.number = 5
-		
-		storyPrompts = [storyPrompt1, storyPrompt2, storyPrompt3]
-		
 	}
 	
 	// MARK: - Table view data source
@@ -67,6 +46,19 @@ class StoryPromptTableViewController: UITableViewController {
 			}
 			storyPromptViewController.storyPrompt = storyPrompt
 		}
+	}
+	
+	@IBAction func saveStoryPrompt(unwindSegue: UIStoryboardSegue) {
+		guard let storyPromptViewController = unwindSegue.source as? StoryPromptViewController,
+		let storyPrompt = storyPromptViewController.storyPrompt else {
+			return
+		}
+		storyPrompts.append(storyPrompt)
+		tableView.reloadData()
+	}
+	
+	@IBAction func cancelStoryPrompt(unwindSegue: UIStoryboardSegue) {
+		
 	}
 	
 }
